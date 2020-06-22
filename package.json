@@ -1,0 +1,25 @@
+{
+  "name": "leaderboardtaskhngi7",
+  "version": "1.0.0",
+  "description": "A Leaderboard Platform that Parses JSON and CSV Files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phemmy10/LeaderboardTaskHNGi7.git"
+  },
+  "author": "Oluwatoni and Abraham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phemmy10/LeaderboardTaskHNGi7/issues"
+  },
+  "homepage": "https://github.com/Phemmy10/LeaderboardTaskHNGi7#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fast-csv": "^2.4.1",
+    "multer": "^1.4.2"
+  }
+}
