@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uploading with Multer</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
+<style>
+    div {
+    
+    padding: 20px;
+}
+
+
+  </style>
+</head>
+<body>
+
+<div>
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+<script>
+    
+    $(document).ready( function () {
+    $('#myTable').DataTable({
+        ajax: {
+        url: '/data',
+        dataSrc: ''
+    },
+        columns: [
+            {data: 'FULL NAME'},
+            {data: 'USERNAME'},
+            {data: 'TOTAL POINTS'}
+        ]
+    });
+} );
+</script>
+</body>
+</html>

@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Phemmy10/LeaderboardTaskHNGi7#readme",
   "dependencies": {
+    "csv-parser": "^2.3.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fast-csv": "^2.4.1",
     "multer": "^1.4.2"
