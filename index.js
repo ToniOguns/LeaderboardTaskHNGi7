@@ -88,6 +88,7 @@ const sendFileData = function(req, res){
      console.log(data);  
   }
 }
+app.use(express.static('./src'));
 
 //ROUTES
 app.route('/uploadfile').post(upload.single('myFile'), fileVerification, displayLeaderBoard);
