@@ -73,6 +73,7 @@ const sendFileData = function(req, res){
     .on('end', () => {
       console.log('CSV file successfully processed');
       res.send(data)
+      console.log(data);
     }); 
   }
   else if (defaultExtension.toLowerCase() == 'json') {
@@ -83,7 +84,8 @@ const sendFileData = function(req, res){
     //get the data array
     let data =(jsonData.data)
     //send the data
-    res.send(data)    
+    res.send(data);
+     console.log(data);  
   }
 }
 
