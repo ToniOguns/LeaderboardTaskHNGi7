@@ -19,7 +19,7 @@ var storage = multer.diskStorage({
     cb(null, 'uploads')
   },
   filename: function (req, file, cb) {
-    cb(null, file.fieldname)
+    cb(null, file.originalname)
   }
 })
  
@@ -83,12 +83,14 @@ const sendFileData = function(req, res){
     //get the data array
     let data =(jsonData.data)
     //send the data
-    res.send(data)    
+    res.send(data)
   }
 }
 
 //ROUTES
 app.route('/uploadfile').post(upload.single('myFile'), fileVerification, displayLeaderBoard);
+app.route('/uploadfile').get(displayLeaderBoard);
+// app.route('/leaderboard').get(generalBoard);
 app.route('/data').get(sendFileData)
 app.route('/').get(function(req, res){
   res.sendFile(__dirname + '/src/upload.html');

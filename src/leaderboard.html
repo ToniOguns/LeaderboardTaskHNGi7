@@ -51,7 +51,17 @@
             {data: 'TOTAL POINTS'}
         ]
     });
-} );
+    $.ajax({
+        url: "http://localhost:9000/data",
+        type: "GET",
+        success: function (result) {
+            console.log('good',result.result)
+        },
+        error: function (error) {
+            console.log('bad',error)
+        }
+    })
+});
 </script>
 </body>
 </html>
